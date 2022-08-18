@@ -30,6 +30,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Camera" id="eG9-aY-B5A">
+                        <barButtonItem key="leftBarButtonItem" systemItem="organize" id="uHY-0N-4Rj">
+                            <connections>
+                                <action selector="photoTapped:" destination="BYZ-38-t0r" id="xGh-P3-Ser"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="camera" id="q7M-Ao-8J5">
                             <connections>
                                 <action selector="cameraTapped:" destination="BYZ-38-t0r" id="MKi-4Z-H3H"/>

@@ -15,12 +15,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     let imagePicker = UIImagePickerController()
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //implementing camera function in app
         imagePicker.delegate = self
-        imagePicker.sourceType = .photoLibrary
+        
         imagePicker.allowsEditing = false
     }
 
@@ -79,8 +80,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         print(request)
     }
 
+    @IBAction func photoTapped(_ sender: UIBarButtonItem) {
+        imagePicker.sourceType = .photoLibrary
+        present(imagePicker, animated: true, completion: nil)
+    }
     @IBAction func cameraTapped(_ sender: UIBarButtonItem) {
-        
+        imagePicker.sourceType = .camera
         present(imagePicker, animated: true, completion: nil)
     }
     
